@@ -1008,14 +1008,17 @@ int main()
         4, 81, 20, 73, 35, 62, 29, 90, 13, 47, 
         82, 1, 84, 61, 43, 94, 99, 46, 57, 100
     };
-
+    int counter = 0;
+    int end;
     timeStart();
-    insertionSort (n, s);
-    cout << timeEnd() << " miliseconds" << endl;
+    insertionSort (n, s, counter);
+    end = timeEnd();
+
     for(i = 0; i < n-1; i++)
     {
         cout << s[i] << ", ";
     }
     cout << s[i] << endl;
+    cout << endl << "Took " << end << " microseconds" << endl << "Ran " << counter << " times" << endl;
 }
 
