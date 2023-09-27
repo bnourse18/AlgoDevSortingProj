@@ -1019,6 +1019,6 @@ int main()
         cout << s[i] << ", ";
     }
     cout << s[i] << endl;
-    cout << endl << "Took " << end << " miliseconds" << endl << "Ran " << counter << " times" << endl;
+    cout << endl << "Took " << end << " microseconds" << endl << "Ran " << counter << " times" << endl;
 }
 
