@@ -4,6 +4,7 @@
 struct heap{
     int size=INT_MIN;
     int* S=nullptr;
+    int cnt=0;
     
     heap(int newsize){
         size=newsize;
@@ -28,14 +29,19 @@ void siftdown(heap& H, int i){
     bool spotfound=false;
     
     while(2*parent+1<H.size && !spotfound){
-        if(2*parent+1<H.size && H.S[2*parent+1]<H.S[2*parent+2]) largerchild=2*parent+2;
-        else largerchild=2*parent+1;
+        H.cnt+2;
+        if(2*parent+1<H.size && H.S[2*parent+1]<H.S[2*parent+2]){
+            H.cnt+2;
+            largerchild=2*parent+2;
+        } else largerchild=2*parent+1;
         
         if(siftkey<H.S[largerchild]){
+            H.cnt++;
             H.S[parent]=H.S[largerchild];
             parent=largerchild;
         } else spotfound=true;
     }
+    H.cnt++;
     H.S[parent]=siftkey;
 }
 
@@ -51,12 +57,18 @@ int root(heap& H){
 }
 
 void removekeys(int n, heap& H){
-    for(int i=n-1; i>=0; i--) H.S[i]=root(H);
+    for(int i=n-1; i>=0; i--){
+        H.cnt++;
+        H.S[i]=root(H);
+    }
 }
 
 void makeheap(int n, heap& H){
     H.size=n;
-    for(int i=floor(n/2); i>=0; i--) siftdown(H,i);
+    for(int i=floor(n/2); i>=0; i--){
+        H.cnt++;
+        siftdown(H,i);
+    }
 }
 
 void heapsort(int n, heap& H){
