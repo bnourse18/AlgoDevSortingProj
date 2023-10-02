@@ -4,6 +4,8 @@
 #include "quicksort.h"
 #include <iostream>
 #include <ctime>
+#include <cmath>
+#include <climits>
 using namespace std;
 
 void clonearray(int master[], int clone[], int size);
