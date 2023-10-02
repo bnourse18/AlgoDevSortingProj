@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sys/time.h>
+using namespace std;
 
 struct timeval startTime;
 
