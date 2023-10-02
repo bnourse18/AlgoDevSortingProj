@@ -1,10 +1,13 @@
 #ifndef heapsort_h
 #define heapsort_h
+#include <cmath>
+#include <climits>
 
 struct heap{
     int size=INT_MIN;
     int* S=nullptr;
     int cnt=0;
+    int fcnt=0;
     
     heap(int newsize){
         size=newsize;
@@ -52,27 +55,29 @@ int root(heap& H){
     H.S[0]=H.S[H.size-1];
     H.size--;
     siftdown(H,0);
+    H.fcnt++;
     
     return keyout;
 }
 
 void removekeys(int n, heap& H){
     for(int i=n-1; i>=0; i--){
-        H.cnt++;
         H.S[i]=root(H);
+        H.fcnt++;
     }
 }
 
 void makeheap(int n, heap& H){
     H.size=n;
     for(int i=floor(n/2); i>=0; i--){
-        H.cnt++;
         siftdown(H,i);
+        H.fcnt++;
     }
 }
 
 void heapsort(int n, heap& H){
     makeheap(n,H);
     removekeys(n,H);
+    H.fcnt+=2;
 }
 #endif
