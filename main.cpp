@@ -17,10 +17,10 @@ int main(int argc, const char * argv[]) {
     srand(static_cast<unsigned int>(time(nullptr))); //creating rng
     for(int i=0; i<size; i++) master[i]=rand(); //adding values to master array
     
-    //heapsort calls, not working, know how to fix
+    //heapsort calls, works
     heap H(size);
-    int endheap;
     clonearray(master,clone,size);
+    for(int i=0; i<size; i++) H.S[i]=clone[i];
     timeStart();
     heapsort(size, H);
     end=timeEnd();
