@@ -5,7 +5,7 @@ void merge(int h, int m, const int U[], const int V[], int S[])
     int i, j, k;
     i=0; j=0; k=0;
 
-    while (i <= h && j <= m) 
+    while (i < h && j < m) 
     {
         //compare
         if (U[i] < V[j]) 
@@ -21,9 +21,9 @@ void merge(int h, int m, const int U[], const int V[], int S[])
         k++;
     }
     
-    if(i>=h)
+    if(i>h)
     {
-        for(int i =0; i<(m-j); i++)
+        for(int i =0; (i+j)<m && (k+i)<(h+m); i++)
         {
             S[k+i] = V[j+i];
         }
@@ -31,7 +31,7 @@ void merge(int h, int m, const int U[], const int V[], int S[])
     }
     else
     {
-        for(int i =0; i<h; i++)
+        for(int i =0; i<h && (k+i)<(h+m); i++)
         {
             S[k+i] = U[i];
         }
@@ -44,7 +44,8 @@ void mergeSort(int n, int S[])
     if (n > 1) 
     {
         // Find the middle point of the array
-        const int h = n/2; int m = n-h;
+        const int h = n/2; 
+        int m = n-h;
         int U[h];
         int V[m];
         for(int i =0; i<h; i++)
