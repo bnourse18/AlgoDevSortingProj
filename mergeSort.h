@@ -1,6 +1,6 @@
 // mergeSort.h
 
-void merge(int h, int m, const int U[], const int V[], int S[]) 
+void merge(int h, int m, const int U[], const int V[], int S[], int &counter) 
 {
     int i, j, k;
     i=0; j=0; k=0;
@@ -8,6 +8,7 @@ void merge(int h, int m, const int U[], const int V[], int S[])
     while (i < h && j < m) 
     {
         //compare
+        counter+=2;
         if (U[i] < V[j]) 
         {
             S[k] = U[i];
@@ -39,7 +40,7 @@ void merge(int h, int m, const int U[], const int V[], int S[])
     }
 }
 
-void mergeSort(int n, int S[]) 
+void mergeSort(int n, int S[], int &counter) 
 {
     if (n > 1) 
     {
@@ -58,10 +59,10 @@ void mergeSort(int n, int S[])
         }
         //copy S[1] through S[h] to U[1] through U[h];
         //copy S[h+1] through S[n] to V[1] through V[m];
-        mergeSort(h, U);
-        mergeSort(m, V);
+        mergeSort(h, U, counter);
+        mergeSort(m, V, counter);
 
         // Merge the sorted halves
-        merge(h, m, U, V, S);
+        merge(h, m, U, V, S, counter);
     }
 }

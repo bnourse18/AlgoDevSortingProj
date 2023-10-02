@@ -12,7 +12,7 @@ int main()
     int counter = 0;
     int end;
     timeStart();
-    mergeSort(n,s);
+    mergeSort(n,s,counter);
     end = timeEnd();
 
     for(i = 0; i < n-1; i++)
@@ -20,6 +20,6 @@ int main()
         cout << s[i] << ", ";
     }
     cout << s[i] << endl;
-    cout << endl << "Took " << end << " microseconds" << endl << "Ran " << counter << " times" << endl;
+    cout << endl << "Took " << end << " microseconds" << endl << "compared " << counter << " times" << endl;
 }
 
