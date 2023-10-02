@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
     for(int i=0; i<size; i++) H.S[i]=clone[i];
     timeStart();
     heapsort(size, H);
-    end=timeEnd();
+    long long end=timeEnd();
     cout<<"heapsort time taken: "<<end<<" microseconds"<<endl;
     cout<<"heapsort had: "<<H.cnt<<" compares"<<endl;
     
