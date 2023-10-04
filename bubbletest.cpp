@@ -4,8 +4,9 @@ using namespace std;
 
 int main() 
 { 
+   int n = 5;
    int s[] = {64, 25, 12, 22, 11}; 
-   int n = 5; 
+   
 
 
     cout << "Original Array: ";
