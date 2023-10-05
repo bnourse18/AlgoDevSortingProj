@@ -1,7 +1,7 @@
 #ifndef bubblesort_h
 #define bubblesort_h
 
-void bubblesort(int s[], int n) {
+void bubblesort(int s[], int n, &counter) {
     int i, j, temp;
 
     for (i = 0; i < n - 1; i++) {

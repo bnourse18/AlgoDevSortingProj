@@ -1,4 +1,5 @@
 #include "bubblesort.h"
+#include "timeCounter.h"
 #include <iostream> 
 using namespace std; 
 
@@ -15,8 +16,12 @@ int main()
     }
     cout << endl;
 
-
-    bubblesort(s,n)
+     int counter = 0;
+    int end;
+    timeStart();
+    bubblesort(s,n, counter)
+    end = timeEnd();
+   
    
      cout << "Sorted Array: ";
       for (int i = 0; i < n; i++) {
@@ -24,11 +29,7 @@ int main()
        }
     cout << endl;
  
-     int counter = 0;
-    int end;
-    timeStart();
-    bubblesort(n, s, counter);
-    end = timeEnd();
+     
 
     cout << endl << "Took " << end << " microseconds" << endl << "Ran " << counter << " times" << endl;
 

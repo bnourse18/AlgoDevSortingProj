@@ -1,4 +1,5 @@
 #include "selectionsort.h"
+#include "timeCounter.h"
 #include <iostream>
 
 using namespace std;
@@ -30,3 +31,4 @@ int main() {
     cout << endl << "Took " << end << " microseconds" << endl << "Ran " << counter << " times" << endl;
 
     return 0;
+}

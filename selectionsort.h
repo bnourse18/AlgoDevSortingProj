@@ -2,7 +2,7 @@
 #define selectionsort_h
 
 
-    void selectionsort(int n, int s[])
+    void selectionsort(int n, int s[], &counter)
     {
        int temp, i, j, smallest;
 
@@ -10,6 +10,8 @@
        {
          smallest = i;
          for ( j = i + 1; j <= n; j++)
+            {
+              counter++;
             if (s[j] < s[smallest])
               smallest = j;
               temp = s[i];
