@@ -19,7 +19,7 @@ int main() {
     int end;
 
     timeStart();
-    selectionsort(n, s);
+    selectionsort(n, s, counter);
     end = timeEnd();
     
 

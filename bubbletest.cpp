@@ -16,7 +16,7 @@ int main()
     }
     cout << endl;
 
-     int counter = 0;
+    int counter = 0;
     int end;
     timeStart();
     bubblesort(s,n, counter)
@@ -27,6 +27,7 @@ int main()
       for (int i = 0; i < n; i++) {
         cout << s[i] << " ";
        }
+    
     cout << endl;
  
      
