@@ -5,16 +5,22 @@
 using namespace std;
 
 int main() {
-    int n = 5; // Set the size of the array
-    int s[] = {5, 2, 9, 1, 5};
+    int i; 
+    int n = 5000;
+    // Create an array to store the random elements
+    int s[n];
 
+    // Generate 5,000 random integers and store them in the array
+    for (int i = 0; i < n; i++) {
+        s[i] = rand() % 1000;  // Generating random integers between 0 and 9999
+    }
     cout << "Original array: ";
     for (int i = 0; i < n; i++) {
         cout << s[i] << " ";
     }
     cout << endl;
 
-
+   
     int counter = 0;
     int end;
 
