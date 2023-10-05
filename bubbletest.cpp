@@ -19,7 +19,7 @@ int main()
     int counter = 0;
     int end;
     timeStart();
-    bubblesort(s,n, counter)
+    bubblesort(s,n, counter);
     end = timeEnd();
    
    

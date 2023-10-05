@@ -44,9 +44,9 @@ int main(int argc, const char * argv[]) {
 
     //bubblesort
     int bubblecounter = 0;
-    clonearray(master,clone,size)
+    clonearray(master,clone,size);
     timeStart(); 
-    bubblesort(size,clone,bubblecounter);
+    bubblesort(clone,size,bubblecounter); //Run bubble sort
     end = timeEnd();
     cout << "Bubble runtime: " << end << " microseconds" << endl;
 	cout << "Bubble performed " << bubblecounter << " operations." << endl << endl;
@@ -54,9 +54,9 @@ int main(int argc, const char * argv[]) {
 
     //selectionsort
     int selectioncounter = 0;
-    clonearray(master,clone,size)
+    clonearray(master,clone,size);
     timeStart(); 
-    selectionsort(size,clone,selectioncounter);
+    selectionsort(size,clone,selectioncounter); // run selection sort 
     end = timeEnd();
     cout << "selection sort runtime: " << end << " microseconds" << endl;
 	cout << "selection sort performed " << selectioncounter << " operations." << endl << endl;
