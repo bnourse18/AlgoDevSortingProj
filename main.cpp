@@ -1,6 +1,8 @@
 #include "timeCounter.h"
 #include "insertion.h"
 #include "heapsort.h"
+#include "bubblesort.h"
+#include "selectionsort.h"
 #include "quicksort.h"
 #include <iostream>
 #include <ctime>
@@ -39,6 +41,28 @@ int main(int argc, const char * argv[]) {
 	cout << "Quicksort runtime: " << end << " microseconds" << endl;
 	cout << "Quicksort performed " << quickcounter << " operations." << endl << endl;
     
+
+    //bubblesort
+    int bubblecounter = 0;
+    clonearray(master,clone,size)
+    timeStart(); 
+    bubblesort(size,clone,bubblecounter);
+    end = timeEnd();
+    cout << "Bubble runtime: " << end << " microseconds" << endl;
+	cout << "Bubble performed " << bubblecounter << " operations." << endl << endl;
+
+
+    //selectionsort
+    int selectioncounter = 0;
+    clonearray(master,clone,size)
+    timeStart(); 
+    selectionsort(size,clone,selectioncounter);
+    end = timeEnd();
+    cout << "selection sort runtime: " << end << " microseconds" << endl;
+	cout << "selection sort performed " << selectioncounter << " operations." << endl << endl;
+
+
+
     return 0;
 }
 

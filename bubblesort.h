@@ -1,5 +1,5 @@
-#ifndef bubblesort_h
-#define bubblesort_h
+//#ifndef bubblesort_h
+// #define bubblesort_h
 
 void bubblesort(int s[], int n, int &counter) {
   int i, j, temp;
