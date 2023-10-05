@@ -4,6 +4,7 @@
 #include "bubblesort.h"
 #include "selectionsort.h"
 #include "quicksort.h"
+#include "mergeSort.h"
 #include <iostream>
 #include <ctime>
 #include <cmath>
@@ -40,6 +41,14 @@ int main(int argc, const char * argv[]) {
 	end = timeEnd();
 	cout << "Quicksort runtime: " << end << " microseconds" << endl;
 	cout << "Quicksort performed " << quickcounter << " operations." << endl << endl;
+
+    int mergecounter = 0;
+    clonearray(master,clone,size);
+	timeStart();
+	mergeSort(size, clone, mergecounter); //Run the merge sort
+	end = timeEnd();
+	cout << "Merge sort runtime: " << end << " microseconds" << endl;
+	cout << "Merge sort performed " << mergecounter << " compares." << endl << endl;
     
 
     //bubblesort
