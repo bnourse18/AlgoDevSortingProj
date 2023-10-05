@@ -15,7 +15,7 @@ void clonearray(int master[], int clone[], int size);
 
 int main(int argc, const char * argv[]) {
     
-    int size=10; //need to change for submission
+    int size=10000; //need to change for submission
     int master [size]; //dont touch once loaded
     int clone [size]; //pass this 1 to sort functions
 	long long end;
@@ -70,6 +70,14 @@ int main(int argc, const char * argv[]) {
     cout << "selection sort runtime: " << end << " microseconds" << endl;
 	cout << "selection sort performed " << selectioncounter << " operations." << endl << endl;
 
+    //Insertion Sort
+    int insertionCounter = 0;
+    clonearray(master,clone,size);
+    timeStart(); 
+    insertionSort(size,clone, insertionCounter); // run insertion sort 
+    end = timeEnd();
+    cout << "Insertion sort runtime: " << end << " microseconds" << endl;
+	cout << "Insertion sort performed " << insertionCounter * 2 << " operations." << endl << endl;
 
 
     return 0;
