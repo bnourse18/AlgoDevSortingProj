@@ -35,6 +35,8 @@ void merge(int h, int m, const int U[], const int V[], int S[], int &counter)
         j++;
         k++;
     }
+}
+
     /*if(i>=h)
     {
         for(int i =0; (i+j)<m && (k+i)<(h+m); i++)
@@ -51,7 +53,6 @@ void merge(int h, int m, const int U[], const int V[], int S[], int &counter)
         }
         //copy U[i] through U[h] to S[k] through S[h+m];
     }*/
-}
 
 void mergeSort(int n, int S[], int &counter) 
 {
