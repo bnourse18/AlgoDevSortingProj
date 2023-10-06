@@ -1,5 +1,3 @@
-
-#include <cstdio>
 void insertionSort (int n, int s[], int &counter)
 {
     int i = 0, j = 0, x = 0;
@@ -9,7 +7,6 @@ void insertionSort (int n, int s[], int &counter)
         j = i - 1;
         while(j >= 0 && s[j] > x)
         {
-            //printf("%d \n", x);
             s[j+1] = s[j];
             j--;
             counter++;
@@ -17,3 +14,5 @@ void insertionSort (int n, int s[], int &counter)
         s[j + 1] = x;
     }
 }
+
+
