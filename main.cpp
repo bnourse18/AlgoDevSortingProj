@@ -57,8 +57,8 @@ int main(int argc, const char * argv[]) {
     timeStart(); 
     bubblesort(clone,size,bubblecounter); //Run bubble sort
     end = timeEnd();
-    cout << "Bubble runtime: " << end << " microseconds" << endl;
-	cout << "Bubble performed " << bubblecounter << " operations." << endl << endl;
+    cout << "Bubble sort runtime: " << end << " microseconds" << endl;
+	cout << "Bubble sort performed " << bubblecounter << " operations." << endl << endl;
 
 
     //selectionsort
