@@ -1013,15 +1013,16 @@ int main()
     };*/
     int counter = 0;
     int end;
-    timeStart();
-    insertionSort (n, s, counter);
+    timeStart(); 
+    insertionSort(n,s, counter); // run insertion sort 
     end = timeEnd();
+    cout << "Insertion sort runtime: " << end << " microseconds" << endl;
+	cout << "Insertion sort performed " << counter * 4 << " operations." << endl << endl;
 
     for(i = 0; i < n-1; i++)
     {
         cout << s[i] << ", ";
     }
     cout << s[i] << endl;
-    cout << endl << "Took " << end << " microseconds" << endl << "Ran " << counter << " times" << endl;
 }
 

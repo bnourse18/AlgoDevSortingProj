@@ -67,8 +67,8 @@ int main(int argc, const char * argv[]) {
     timeStart(); 
     selectionsort(size,clone,selectioncounter); // run selection sort 
     end = timeEnd();
-    cout << "selection sort runtime: " << end << " microseconds" << endl;
-	cout << "selection sort performed " << selectioncounter << " operations." << endl << endl;
+    cout << "Selection sort runtime: " << end << " microseconds" << endl;
+	cout << "Selection sort performed " << selectioncounter << " operations." << endl << endl;
 
     //Insertion Sort
     int insertionCounter = 0;
